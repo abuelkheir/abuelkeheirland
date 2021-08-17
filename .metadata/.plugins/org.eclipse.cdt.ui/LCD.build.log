@@ -1,0 +1,43 @@
+12:26:10 **** Incremental Build of configuration Debug for project LCD ****
+make all 
+Building file: ../LCDMainTrial.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCDMainTrial.d" -MT"LCDMainTrial.o" -c -o "LCDMainTrial.o" "../LCDMainTrial.c"
+In file included from ../LCDMainTrial.c:11:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../LCDMainTrial.c:11:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../LCDMainTrial.c
+ 
+Building target: LCD.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,LCD.map -mmcu=atmega32 -o "LCD.elf"  ./DIO_Prog.o ./LCDMainTrial.o ./LCD_Pro.o   
+Finished building target: LCD.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S LCD.elf  >"LCD.lss"
+Finished building: LCD.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD.elf  "LCD.hex"
+Finished building: LCD.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7196 bytes (22.0% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+12:26:10 Build Finished (took 400ms)
+

@@ -1,15 +1,5 @@
-09:55:35 **** Build of configuration Debug for project LCD_Driver ****
+10:17:30 **** Incremental Build of configuration Debug for project LCD_Driver ****
 make all 
-Building file: ../LCDMainTrial.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCDMainTrial.d" -MT"LCDMainTrial.o" -c -o "LCDMainTrial.o" "../LCDMainTrial.c"
-In file included from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../LCDMainTrial.c
- 
 Building file: ../LCD_Pro.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD_Pro.d" -MT"LCD_Pro.o" -c -o "LCD_Pro.o" "../LCD_Pro.c"
@@ -20,7 +10,6 @@ In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../a
 d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 ../LCD_Pro.c: In function 'LCD_vidWriteData':
 ../LCD_Pro.c:20: warning: implicit declaration of function 'DIO_vidSetPinValue'
-../LCD_Pro.c:23: warning: implicit declaration of function 'DIO_vidSetPinVal'
 Finished building: ../LCD_Pro.c
  
 Building target: libLCD_Driver.a
@@ -60,5 +49,5 @@ Data:          0 bytes (0.0% Full)
 Finished building: sizedummy
  
 
-09:55:36 Build Finished (took 538ms)
+10:17:30 Build Finished (took 488ms)
 

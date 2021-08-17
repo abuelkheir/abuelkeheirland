@@ -5,7 +5,6 @@
 #include "../MyLibs/BIT_MATH.H"
 #include "DIO_int.h"
 
-// test
 // function used to get pins
 u8 DI0_u8GetPin(u8 Copy_PortX, u8 Copy_PinX){
 		u8 Temp;

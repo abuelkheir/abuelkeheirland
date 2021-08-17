@@ -1,6 +1,6 @@
-09:55:35 **** Incremental Build of configuration Default for project Day12(lcd) ****
+10:20:50 **** Incremental Build of configuration Default for project Day12(lcd) ****
 make all 
 make: *** No rule to make target `all'.  Stop.
 
-09:55:35 Build Finished (took 87ms)
+10:20:50 Build Finished (took 93ms)
 

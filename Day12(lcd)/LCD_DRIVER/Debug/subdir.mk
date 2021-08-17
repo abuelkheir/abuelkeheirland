@@ -4,12 +4,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../LCDMainTrial.c \
 ../LCD_Pro.c 
 
 OBJS += \
+./LCDMainTrial.o \
 ./LCD_Pro.o 
 
 C_DEPS += \
+./LCDMainTrial.d \
 ./LCD_Pro.d 
 
 

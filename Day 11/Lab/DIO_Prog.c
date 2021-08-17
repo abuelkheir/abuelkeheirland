@@ -1,9 +1,9 @@
 
 #include <avr/delay.h>
-#include "DIO_int.h"
 #include "../MyLibs/Atmega32Registers.h"
 #include "../MyLibs/STD_TYPES.h"
 #include "../MyLibs/BIT_MATH.H"
+#include "DIO_int.h"
 
 // test
 // function used to get pins

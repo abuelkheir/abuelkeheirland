@@ -5,9 +5,11 @@
  *      Author: a7med
  */
 
-#include "../../Day 11/MyLibs/STD_TYPES.h"
+
+#include "LCD_int.h"
 #include "../../Day 11/MyLibs/Atmega32Registers.h"
 #include "../../Day 11/MyLibs/BIT_MATH.h"
+//#include "../../Day 11/Lab/DIO_Prog.c"
 #include "../../Day 11/Lab/DIO_int.h"
 #include "avr/delay.h"
 #include "LCD_int.h"

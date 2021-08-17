@@ -7,7 +7,7 @@
 
 #ifndef LCD_INT_H_
 #define LCD_INT_H_
-//#include "../../Day 11/MyLibs/STD_TYPES.H"
+#include "../../Day 11/MyLibs/STD_TYPES.H"
 
 
 #define LCD_u8CLEAR_DISPLAY 	0X01

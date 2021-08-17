@@ -1,0 +1,45 @@
+07:34:26 **** Incremental Build of configuration Debug for project LCD_Driver ****
+make all 
+Building file: ../LCD_Pro.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD_Pro.d" -MT"LCD_Pro.o" -c -o "LCD_Pro.o" "../LCD_Pro.c"
+In file included from ../../../Day 11/Lab/DIO_Prog.c:2,
+                 from ../LCD_Pro.c:12:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../../../Day 11/Lab/DIO_Prog.c:2,
+                 from ../LCD_Pro.c:12:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD_Pro.c: In function 'LCD_vidWriteData':
+../LCD_Pro.c:22: warning: implicit declaration of function 'DIO_vidSetPinVal'
+../LCD_Pro.c:24: warning: implicit declaration of function 'DIO_vidSetPortVal'
+Finished building: ../LCD_Pro.c
+ 
+Building target: libLCD_Driver.a
+Invoking: AVR Archiver
+avr-ar -r  "libLCD_Driver.a"  ./LCD_Pro.o  
+d:\Embedded training\IMT_SDK_Win_64\WinAVR\bin\avr-ar.exe: creating libLCD_Driver.a
+Finished building target: libLCD_Driver.a
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S libLCD_Driver.a  >"libLCD_Driver.lss"
+Finished building: libLCD_Driver.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 libLCD_Driver.a
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:       0 bytes (0.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+07:34:28 Build Finished (took 2s.108ms)
+

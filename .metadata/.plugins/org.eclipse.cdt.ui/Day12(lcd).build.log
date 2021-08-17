@@ -1,0 +1,6 @@
+08:51:59 **** Build of configuration Default for project Day12(lcd) ****
+make all 
+make: *** No rule to make target `all'.  Stop.
+
+08:51:59 Build Finished (took 93ms)
+

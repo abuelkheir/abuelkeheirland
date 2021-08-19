@@ -1,0 +1,21 @@
+/*
+ * KeyPad_Pro.c
+ *
+ *  Created on: Aug 18, 2021
+ *      Author: a7med
+ */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "Atmega32Registers.h"
+#include "DIO_int.h"
+#include "KeyPad_int.h"
+
+
+void Keypad_vidInit(){
+	DIO_vidSetPinDirection(PORT,ROW_1,DIO_u8OUTPUT)
+    DIO_vidSetPinDirection(PORT,ROW_2,DIO_u8OUTPUT)
+	DIO_vidSetPinDirection(PORT,ROW_3,DIO_u8OUTPUT)
+	DIO_vidSetPinDirection(PORT,ROW_4,DIO_u8OUTPUT)
+
+
+}

@@ -10,12 +10,14 @@
 
 void LCD_vidWriteData(u8 Copy_Data)
 {
-	DIO_vidSetPinVal(PORTC, DIO_u8PIN_0, DIOHIGH);
-	DIO_vidSetPinVal(PORTC, DIO_u8PIN_1, DIOLOW);
+	DIO_vidSetPinVal(PORTC,DIO_u8PIN_0,DIO_u8HIGH);
+	DIO_vidSetPinVal(PORTC,DIO_u8PIN_1,DIO_u8LOW);
+	DIO_vidSetPinVal(PORTC,DIO_u8PIN_2,DIO_u8HIGH);
+	_delay_ms(2);
 	DIO_vidSetPortVal(PORTD,Copy_Data);
-	DIO_vidSetPinVal(PORTC,DIO_u8PIN_2,DIOHIGH);
-	_delay_ms(1.53);
-	DIO_vidSetPinVal(PORTC,DIO_u8PIN_2,DIOLOW);
+	_delay_ms(1);
+	DIO_vidSetPinVal(PORTC,DIO_u8PIN_2,DIO_u8LOW);
+	DIO_vidSetPinVal(PORTC,DIO_u8PIN_0,DIO_u8HIGH);
 }
 
 void LCD_vidSendCommand(u8 Copy_Command)
@@ -30,6 +32,7 @@ void LCD_vidSendCommand(u8 Copy_Command)
 
 void LCD_vidWriteString(u8 * Copy_String)
 {
+
 	for(int i=0; Copy_String[i]!='\0'; i++)
 	{
 		LCD_vidWriteData(Copy_String[i]);

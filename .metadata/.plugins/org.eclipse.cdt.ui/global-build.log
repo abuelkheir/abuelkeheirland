@@ -1,512 +1,4 @@
-11:52:11 **** Clean-only build of configuration Debug for project LCD ****
-make clean 
-rm -rf  LCD.hex  ./DIO_Prog.o ./LCDMainTrial.o ./LCD_Pro.o  sizedummy  LCD.lss  ./DIO_Prog.d ./LCDMainTrial.d ./LCD_Pro.d  LCD.elf
- 
-11:53:07 **** Build of configuration Debug for project LCD ****
-make all 
-Building file: ../DIO_Prog.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"DIO_Prog.d" -MT"DIO_Prog.o" -c -o "DIO_Prog.o" "../DIO_Prog.c"
-In file included from ../DIO_Prog.c:2:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../DIO_Prog.c:2:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../DIO_Prog.c
- 
-Building file: ../LCDMainTrial.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCDMainTrial.d" -MT"LCDMainTrial.o" -c -o "LCDMainTrial.o" "../LCDMainTrial.c"
-In file included from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../LCDMainTrial.c: In function 'main':
-../LCDMainTrial.c:17: warning: passing argument 1 of 'LCD_vidWriteData' makes integer from pointer without a cast
-Finished building: ../LCDMainTrial.c
- 
-Building file: ../LCD_Pro.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD_Pro.d" -MT"LCD_Pro.o" -c -o "LCD_Pro.o" "../LCD_Pro.c"
-In file included from ../LCD_Pro.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCD_Pro.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../LCD_Pro.c: In function 'LCD_vidWriteData':
-../LCD_Pro.c:20: warning: implicit declaration of function 'DIO_vidSetPinVal'
-../LCD_Pro.c:22: warning: implicit declaration of function 'DIO_vidSetPortVal'
-Finished building: ../LCD_Pro.c
- 
-Building target: LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,LCD.map -mmcu=atmega32 -o "LCD.elf"  ./DIO_Prog.o ./LCDMainTrial.o ./LCD_Pro.o   
-./LCD_Pro.o: In function `LCD_vidWriteData':
-../LCD_Pro.c:20: undefined reference to `DIO_vidSetPinVal'
-../LCD_Pro.c:21: undefined reference to `DIO_vidSetPinVal'
-../LCD_Pro.c:22: undefined reference to `DIO_vidSetPortVal'
-../LCD_Pro.c:23: undefined reference to `DIO_vidSetPinVal'
-../LCD_Pro.c:25: undefined reference to `DIO_vidSetPinVal'
-../LCD_Pro.c:20: undefined reference to `DIO_vidSetPinVal'
-../LCD_Pro.c:21: undefined reference to `DIO_vidSetPinVal'
-../LCD_Pro.c:22: undefined reference to `DIO_vidSetPortVal'
-../LCD_Pro.c:23: undefined reference to `DIO_vidSetPinVal'
-../LCD_Pro.c:25: undefined reference to `DIO_vidSetPinVal'
-make: *** [LCD.elf] Error 1
-11:53:31 **** Incremental Build of configuration Debug for project LCD ****
-make all 
-Building file: ../LCD_Pro.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD_Pro.d" -MT"LCD_Pro.o" -c -o "LCD_Pro.o" "../LCD_Pro.c"
-In file included from ../LCD_Pro.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCD_Pro.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../LCD_Pro.c: In function 'LCD_vidSendCommand':
-../LCD_Pro.c:32: warning: implicit declaration of function 'DIO_vidSetPinVal'
-../LCD_Pro.c:34: warning: implicit declaration of function 'DIO_vidSetPortVal'
-Finished building: ../LCD_Pro.c
- 
-Building target: LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,LCD.map -mmcu=atmega32 -o "LCD.elf"  ./DIO_Prog.o ./LCDMainTrial.o ./LCD_Pro.o   
-./LCD_Pro.o: In function `LCD_vidWriteData':
-../LCD_Pro.c:20: undefined reference to `DIO_vidSetPinVal'
-../LCD_Pro.c:21: undefined reference to `DIO_vidSetPinVal'
-../LCD_Pro.c:22: undefined reference to `DIO_vidSetPortVal'
-../LCD_Pro.c:23: undefined reference to `DIO_vidSetPinVal'
-../LCD_Pro.c:25: undefined reference to `DIO_vidSetPinVal'
-make: *** [LCD.elf] Error 1
-11:53:55 **** Incremental Build of configuration Debug for project LCD ****
-make all 
-Building file: ../LCD_Pro.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD_Pro.d" -MT"LCD_Pro.o" -c -o "LCD_Pro.o" "../LCD_Pro.c"
-In file included from ../LCD_Pro.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCD_Pro.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../LCD_Pro.c
- 
-Building target: LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,LCD.map -mmcu=atmega32 -o "LCD.elf"  ./DIO_Prog.o ./LCDMainTrial.o ./LCD_Pro.o   
-Finished building target: LCD.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S LCD.elf  >"LCD.lss"
-Finished building: LCD.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD.elf  "LCD.hex"
-Finished building: LCD.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7130 bytes (21.8% Full)
-(.text + .data + .bootloader)
-
-Data:         14 bytes (0.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-11:54:01 **** Incremental Build of configuration Debug for project LCD ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7130 bytes (21.8% Full)
-(.text + .data + .bootloader)
-
-Data:         14 bytes (0.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-11:55:40 **** Incremental Build of configuration Debug for project LCD ****
-make all 
-Building file: ../LCDMainTrial.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCDMainTrial.d" -MT"LCDMainTrial.o" -c -o "LCDMainTrial.o" "../LCDMainTrial.c"
-In file included from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../LCDMainTrial.c: In function 'main':
-../LCDMainTrial.c:17: warning: passing argument 1 of 'LCD_vidWriteData' makes integer from pointer without a cast
-Finished building: ../LCDMainTrial.c
- 
-Building file: ../LCD_Pro.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD_Pro.d" -MT"LCD_Pro.o" -c -o "LCD_Pro.o" "../LCD_Pro.c"
-In file included from ../LCD_Pro.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCD_Pro.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../LCD_Pro.c
- 
-Building target: LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,LCD.map -mmcu=atmega32 -o "LCD.elf"  ./DIO_Prog.o ./LCDMainTrial.o ./LCD_Pro.o   
-Finished building target: LCD.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S LCD.elf  >"LCD.lss"
-Finished building: LCD.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD.elf  "LCD.hex"
-Finished building: LCD.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7130 bytes (21.8% Full)
-(.text + .data + .bootloader)
-
-Data:         14 bytes (0.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-12:03:58 **** Incremental Build of configuration Debug for project LCD ****
-make all 
-Building file: ../DIO_Prog.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"DIO_Prog.d" -MT"DIO_Prog.o" -c -o "DIO_Prog.o" "../DIO_Prog.c"
-In file included from ../DIO_Prog.c:2:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../DIO_Prog.c:2:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../DIO_Prog.c
- 
-Building file: ../LCDMainTrial.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCDMainTrial.d" -MT"LCDMainTrial.o" -c -o "LCDMainTrial.o" "../LCDMainTrial.c"
-In file included from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../LCDMainTrial.c: In function 'main':
-../LCDMainTrial.c:17: warning: passing argument 1 of 'LCD_vidWriteData' makes integer from pointer without a cast
-Finished building: ../LCDMainTrial.c
- 
-Building file: ../LCD_Pro.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD_Pro.d" -MT"LCD_Pro.o" -c -o "LCD_Pro.o" "../LCD_Pro.c"
-In file included from ../LCD_Pro.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCD_Pro.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../LCD_Pro.c
- 
-Building target: LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,LCD.map -mmcu=atmega32 -o "LCD.elf"  ./DIO_Prog.o ./LCDMainTrial.o ./LCD_Pro.o   
-Finished building target: LCD.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S LCD.elf  >"LCD.lss"
-Finished building: LCD.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD.elf  "LCD.hex"
-Finished building: LCD.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7126 bytes (21.7% Full)
-(.text + .data + .bootloader)
-
-Data:         10 bytes (0.5% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-12:14:01 **** Incremental Build of configuration Debug for project LCD ****
-make all 
-Building file: ../DIO_Prog.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"DIO_Prog.d" -MT"DIO_Prog.o" -c -o "DIO_Prog.o" "../DIO_Prog.c"
-In file included from ../DIO_Prog.c:2:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../DIO_Prog.c:2:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../DIO_Prog.c
- 
-Building file: ../LCDMainTrial.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCDMainTrial.d" -MT"LCDMainTrial.o" -c -o "LCDMainTrial.o" "../LCDMainTrial.c"
-In file included from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../LCDMainTrial.c: In function 'main':
-../LCDMainTrial.c:17: warning: passing argument 1 of 'LCD_vidWriteData' makes integer from pointer without a cast
-Finished building: ../LCDMainTrial.c
- 
-Building file: ../LCD_Pro.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD_Pro.d" -MT"LCD_Pro.o" -c -o "LCD_Pro.o" "../LCD_Pro.c"
-In file included from ../LCD_Pro.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCD_Pro.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../LCD_Pro.c
- 
-Building target: LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,LCD.map -mmcu=atmega32 -o "LCD.elf"  ./DIO_Prog.o ./LCDMainTrial.o ./LCD_Pro.o   
-Finished building target: LCD.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S LCD.elf  >"LCD.lss"
-Finished building: LCD.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD.elf  "LCD.hex"
-Finished building: LCD.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7110 bytes (21.7% Full)
-(.text + .data + .bootloader)
-
-Data:         10 bytes (0.5% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-12:14:25 **** Incremental Build of configuration Debug for project LCD ****
-make all 
-Building file: ../DIO_Prog.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"DIO_Prog.d" -MT"DIO_Prog.o" -c -o "DIO_Prog.o" "../DIO_Prog.c"
-In file included from ../DIO_Prog.c:2:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../DIO_Prog.c:2:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../DIO_Prog.c
- 
-Building file: ../LCDMainTrial.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCDMainTrial.d" -MT"LCDMainTrial.o" -c -o "LCDMainTrial.o" "../LCDMainTrial.c"
-In file included from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../LCDMainTrial.c: In function 'main':
-../LCDMainTrial.c:17: warning: passing argument 1 of 'LCD_vidWriteData' makes integer from pointer without a cast
-Finished building: ../LCDMainTrial.c
- 
-Building file: ../LCD_Pro.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD_Pro.d" -MT"LCD_Pro.o" -c -o "LCD_Pro.o" "../LCD_Pro.c"
-In file included from ../LCD_Pro.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCD_Pro.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../LCD_Pro.c
- 
-Building target: LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,LCD.map -mmcu=atmega32 -o "LCD.elf"  ./DIO_Prog.o ./LCDMainTrial.o ./LCD_Pro.o   
-Finished building target: LCD.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S LCD.elf  >"LCD.lss"
-Finished building: LCD.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD.elf  "LCD.hex"
-Finished building: LCD.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7126 bytes (21.7% Full)
-(.text + .data + .bootloader)
-
-Data:         10 bytes (0.5% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-12:19:18 **** Incremental Build of configuration Debug for project LCD ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7126 bytes (21.7% Full)
-(.text + .data + .bootloader)
-
-Data:         10 bytes (0.5% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-12:21:30 **** Incremental Build of configuration Debug for project LCD ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7126 bytes (21.7% Full)
-(.text + .data + .bootloader)
-
-Data:         10 bytes (0.5% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-12:25:30 **** Incremental Build of configuration Debug for project LCD ****
-make all 
-Building file: ../LCDMainTrial.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCDMainTrial.d" -MT"LCDMainTrial.o" -c -o "LCDMainTrial.o" "../LCDMainTrial.c"
-In file included from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../LCDMainTrial.c: In function 'main':
-../LCDMainTrial.c:16: warning: 'main' is normally a non-static function
-../LCDMainTrial.c:24: error: expected declaration or statement at end of input
-make: *** [LCDMainTrial.o] Error 1
-12:25:44 **** Incremental Build of configuration Debug for project LCD ****
-make all 
-Building file: ../LCDMainTrial.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCDMainTrial.d" -MT"LCDMainTrial.o" -c -o "LCDMainTrial.o" "../LCDMainTrial.c"
-In file included from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../LCDMainTrial.c
- 
-Building target: LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,LCD.map -mmcu=atmega32 -o "LCD.elf"  ./DIO_Prog.o ./LCDMainTrial.o ./LCD_Pro.o   
-Finished building target: LCD.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S LCD.elf  >"LCD.lss"
-Finished building: LCD.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD.elf  "LCD.hex"
-Finished building: LCD.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7196 bytes (22.0% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-12:26:10 **** Incremental Build of configuration Debug for project LCD ****
-make all 
-Building file: ../LCDMainTrial.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCDMainTrial.d" -MT"LCDMainTrial.o" -c -o "LCDMainTrial.o" "../LCDMainTrial.c"
-In file included from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCDMainTrial.c:11:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../LCDMainTrial.c
- 
-Building target: LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,LCD.map -mmcu=atmega32 -o "LCD.elf"  ./DIO_Prog.o ./LCDMainTrial.o ./LCD_Pro.o   
-Finished building target: LCD.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S LCD.elf  >"LCD.lss"
-Finished building: LCD.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD.elf  "LCD.hex"
-Finished building: LCD.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7196 bytes (22.0% Full)
-(.text + .data + .bootloader)
-
-Data:          8 bytes (0.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-12:32:21 **** Clean-only build of configuration Debug for project LCD_Driver01 ****
-make clean 
-rm -rf  LCD_Driver01.hex  ./DIO_Prog.o ./LCD_Prog.o ./main.o  sizedummy  LCD_Driver01.lss  ./DIO_Prog.d ./LCD_Prog.d ./main.d  LCD_Driver01.elf
- 
-12:32:22 **** Build of configuration Debug for project LCD_Driver01 ****
+11:04:16 **** Build of configuration Debug for project LCD_Driver01 ****
 make all 
 Building file: ../DIO_Prog.c
 Invoking: AVR Compiler
@@ -531,171 +23,317 @@ d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h
 In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
                  from ../main.c:4:
 d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../main.c:12:48: warning: multi-character character constant
-Finished building: ../main.c
+../main.c: In function 'main':
+../main.c:20: error: 'DIO_u8HIGH' undeclared (first use in this function)
+../main.c:20: error: (Each undeclared identifier is reported only once
+../main.c:20: error: for each function it appears in.)
+../main.c:22: error: 'DIO_u8LOW' undeclared (first use in this function)
+make: *** [main.o] Error 1
+11:05:24 **** Incremental Build of configuration Debug for project KeyPad ****
+make all 
+Building file: ../KeyPadMain.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"KeyPadMain.d" -MT"KeyPadMain.o" -c -o "KeyPadMain.o" "../KeyPadMain.c"
+../KeyPadMain.c: In function 'main':
+../KeyPadMain.c:27: warning: implicit declaration of function '_delay_ms'
+Finished building: ../KeyPadMain.c
  
-Building target: LCD_Driver01.elf
+Building target: KeyPad.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,LCD_Driver01.map -mmcu=atmega32 -o "LCD_Driver01.elf"  ./DIO_Prog.o ./LCD_Prog.o ./main.o   
-Finished building target: LCD_Driver01.elf
+avr-gcc -Wl,-Map,KeyPad.map -mmcu=atmega32 -o "KeyPad.elf"  ./DIO_Prog.o ./KeyPadMain.o ./KeyPad_Pro.o ./LCD_Prog.o   
+./KeyPadMain.o: In function `main':
+../KeyPadMain.c:27: undefined reference to `_delay_ms'
+../KeyPadMain.c:29: undefined reference to `_delay_ms'
+../KeyPadMain.c:31: undefined reference to `_delay_ms'
+make: *** [KeyPad.elf] Error 1
+11:05:39 **** Incremental Build of configuration Debug for project KeyPad ****
+make all 
+Building file: ../KeyPadMain.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"KeyPadMain.d" -MT"KeyPadMain.o" -c -o "KeyPadMain.o" "../KeyPadMain.c"
+In file included from ../KeyPadMain.c:7:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../KeyPadMain.c:7:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../KeyPadMain.c
+ 
+Building target: KeyPad.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,KeyPad.map -mmcu=atmega32 -o "KeyPad.elf"  ./DIO_Prog.o ./KeyPadMain.o ./KeyPad_Pro.o ./LCD_Prog.o   
+Finished building target: KeyPad.elf
  
 Invoking: AVR Create Extended Listing
-avr-objdump -h -S LCD_Driver01.elf  >"LCD_Driver01.lss"
-Finished building: LCD_Driver01.lss
+avr-objdump -h -S KeyPad.elf  >"KeyPad.lss"
+Finished building: KeyPad.lss
  
 Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD_Driver01.elf  "LCD_Driver01.hex"
-Finished building: LCD_Driver01.hex
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex KeyPad.elf  "KeyPad.hex"
+Finished building: KeyPad.hex
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 LCD_Driver01.elf
+avr-size --format=avr --mcu=atmega32 KeyPad.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    7180 bytes (21.9% Full)
+Program:    8064 bytes (24.6% Full)
 (.text + .data + .bootloader)
 
-Data:         28 bytes (1.4% Full)
+Data:         32 bytes (1.6% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
-12:32:44 **** Incremental Build of configuration Debug for project LCD_Driver01 ****
+11:06:57 **** Incremental Build of configuration Debug for project MOTOR&Hbridge ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:4:
+In file included from ../main.c:5:
 d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
 In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../main.c:4:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../main.c: In function 'main':
-../main.c:12: error: stray '\' in program
-../main.c:12:54: warning: missing terminating ' character
-../main.c:12: error: missing terminating ' character
-../main.c:13: warning: excess elements in array initializer
-../main.c:13: warning: (near initialization for 's')
-../main.c:13: error: expected '}' before 'LCD_vidWriteString'
-../main.c:17: error: expected ',' or ';' at end of input
-../main.c:17: error: expected declaration or statement at end of input
-../main.c:12: warning: unused variable 's'
-make: *** [main.o] Error 1
-12:32:53 **** Incremental Build of configuration Debug for project LCD_Driver01 ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:4:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../main.c:4:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../main.c:12:52: error: empty character constant
-../main.c: In function 'main':
-../main.c:12: error: stray '\' in program
-../main.c:12: warning: excess elements in array initializer
-../main.c:12: warning: (near initialization for 's')
-../main.c:12: error: expected '}' before numeric constant
-../main.c:12:56: warning: missing terminating ' character
-../main.c:12: error: missing terminating ' character
-../main.c:17: error: expected ',' or ';' at end of input
-../main.c:17: error: expected declaration or statement at end of input
-../main.c:12: warning: unused variable 's'
-make: *** [main.o] Error 1
-12:33:33 **** Incremental Build of configuration Debug for project LCD_Driver01 ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:4:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../main.c:4:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../main.c: In function 'main':
-../main.c:12: error: stray '\' in program
-../main.c:12: error: expected '}' before numeric constant
-../main.c:12:53: warning: missing terminating ' character
-../main.c:12: error: missing terminating ' character
-../main.c:17: error: expected ',' or ';' at end of input
-../main.c:17: error: expected declaration or statement at end of input
-../main.c:12: warning: unused variable 's'
-make: *** [main.o] Error 1
-12:33:37 **** Incremental Build of configuration Debug for project LCD_Driver01 ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:4:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../main.c:4:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../main.c:12:48: warning: multi-character character constant
-../main.c: In function 'main':
-../main.c:12: error: stray '\' in program
-../main.c:12: error: expected '}' before numeric constant
-../main.c:12:54: warning: missing terminating ' character
-../main.c:12: error: missing terminating ' character
-../main.c:17: error: expected ',' or ';' at end of input
-../main.c:17: error: expected declaration or statement at end of input
-../main.c:12: warning: unused variable 's'
-make: *** [main.o] Error 1
-12:34:19 **** Incremental Build of configuration Debug for project LCD_Driver01 ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:4:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../main.c:4:
+                 from ../main.c:5:
 d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../main.c
  
-Building target: LCD_Driver01.elf
+Building target: MOTOR&Hbridge.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,LCD_Driver01.map -mmcu=atmega32 -o "LCD_Driver01.elf"  ./DIO_Prog.o ./LCD_Prog.o ./main.o   
-Finished building target: LCD_Driver01.elf
+avr-gcc -Wl,-Map,MOTOR&Hbridge.map -mmcu=atmega32 -o "MOTOR&Hbridge.elf"  ./DIO_Prog.o ./main.o   
+"D:/Embedded training/IMT_SDK_Win_64/WinAVR/utils/bin/sh.exe": Hbridge.map: command not found
+make: *** [MOTOR&Hbridge.elf] Error 127
+11:08:28 **** Incremental Build of configuration Debug for project MOTOR&Hbridge ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:5:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:5:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
  
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S LCD_Driver01.elf  >"LCD_Driver01.lss"
-Finished building: LCD_Driver01.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD_Driver01.elf  "LCD_Driver01.hex"
-Finished building: LCD_Driver01.hex
- 
+Building target: MOTOR&Hbridge.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MOTOR&Hbridge.map -mmcu=atmega32 -o "MOTOR&Hbridge.elf"  ./DIO_Prog.o ./main.o   
+"D:/Embedded training/IMT_SDK_Win_64/WinAVR/utils/bin/sh.exe": Hbridge.map: command not found
+make: *** [MOTOR&Hbridge.elf] Error 127
+11:10:56 **** Incremental Build of configuration Debug for project KeyPad ****
+make all 
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 LCD_Driver01.elf
+avr-size --format=avr --mcu=atmega32 KeyPad.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    7152 bytes (21.8% Full)
+Program:    8064 bytes (24.6% Full)
 (.text + .data + .bootloader)
 
-Data:          8 bytes (0.4% Full)
+Data:         32 bytes (1.6% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
-12:35:10 **** Incremental Build of configuration Debug for project LCD_Driver01 ****
+11:50:17 **** Incremental Build of configuration Debug for project KeyPad ****
 make all 
+Building file: ../KeyPadMain.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"KeyPadMain.d" -MT"KeyPadMain.o" -c -o "KeyPadMain.o" "../KeyPadMain.c"
+In file included from ../KeyPadMain.c:7:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../KeyPadMain.c:7:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../KeyPadMain.c
+ 
+Building target: KeyPad.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,KeyPad.map -mmcu=atmega32 -o "KeyPad.elf"  ./DIO_Prog.o ./KeyPadMain.o ./KeyPad_Pro.o ./LCD_Prog.o   
+Finished building target: KeyPad.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S KeyPad.elf  >"KeyPad.lss"
+Finished building: KeyPad.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex KeyPad.elf  "KeyPad.hex"
+Finished building: KeyPad.hex
+ 
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 LCD_Driver01.elf
+avr-size --format=avr --mcu=atmega32 KeyPad.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    7152 bytes (21.8% Full)
+Program:    7598 bytes (23.2% Full)
 (.text + .data + .bootloader)
 
-Data:          8 bytes (0.4% Full)
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:50:34 **** Incremental Build of configuration Debug for project KeyPad ****
+make all 
+Building file: ../KeyPadMain.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"KeyPadMain.d" -MT"KeyPadMain.o" -c -o "KeyPadMain.o" "../KeyPadMain.c"
+In file included from ../KeyPadMain.c:7:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../KeyPadMain.c:7:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../KeyPadMain.c
+ 
+Building target: KeyPad.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,KeyPad.map -mmcu=atmega32 -o "KeyPad.elf"  ./DIO_Prog.o ./KeyPadMain.o ./KeyPad_Pro.o ./LCD_Prog.o   
+Finished building target: KeyPad.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S KeyPad.elf  >"KeyPad.lss"
+Finished building: KeyPad.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex KeyPad.elf  "KeyPad.hex"
+Finished building: KeyPad.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 KeyPad.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7598 bytes (23.2% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:53:07 **** Incremental Build of configuration Debug for project KeyPad ****
+make all 
+Building file: ../KeyPadMain.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"KeyPadMain.d" -MT"KeyPadMain.o" -c -o "KeyPadMain.o" "../KeyPadMain.c"
+In file included from ../KeyPadMain.c:7:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../KeyPadMain.c:7:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../KeyPadMain.c
+ 
+Building target: KeyPad.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,KeyPad.map -mmcu=atmega32 -o "KeyPad.elf"  ./DIO_Prog.o ./KeyPadMain.o ./KeyPad_Pro.o ./LCD_Prog.o   
+Finished building target: KeyPad.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S KeyPad.elf  >"KeyPad.lss"
+Finished building: KeyPad.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex KeyPad.elf  "KeyPad.hex"
+Finished building: KeyPad.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 KeyPad.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7826 bytes (23.9% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:12:59 **** Incremental Build of configuration Debug for project KeyPad ****
+make all 
+Building file: ../KeyPadMain.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"KeyPadMain.d" -MT"KeyPadMain.o" -c -o "KeyPadMain.o" "../KeyPadMain.c"
+../KeyPadMain.c:1:23: warning: extra tokens at end of #include directive
+In file included from ../KeyPadMain.c:7:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../KeyPadMain.c:7:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../KeyPadMain.c
+ 
+Building target: KeyPad.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,KeyPad.map -mmcu=atmega32 -o "KeyPad.elf"  ./DIO_Prog.o ./KeyPadMain.o ./KeyPad_Pro.o ./LCD_Prog.o   
+Finished building target: KeyPad.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S KeyPad.elf  >"KeyPad.lss"
+Finished building: KeyPad.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex KeyPad.elf  "KeyPad.hex"
+Finished building: KeyPad.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 KeyPad.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7538 bytes (23.0% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:17:43 **** Incremental Build of configuration Debug for project KeyPad ****
+make all 
+Building file: ../KeyPadMain.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"KeyPadMain.d" -MT"KeyPadMain.o" -c -o "KeyPadMain.o" "../KeyPadMain.c"
+../KeyPadMain.c:1:23: warning: extra tokens at end of #include directive
+In file included from ../KeyPadMain.c:7:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../KeyPadMain.c:7:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../KeyPadMain.c
+ 
+Building target: KeyPad.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,KeyPad.map -mmcu=atmega32 -o "KeyPad.elf"  ./DIO_Prog.o ./KeyPadMain.o ./KeyPad_Pro.o ./LCD_Prog.o   
+Finished building target: KeyPad.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S KeyPad.elf  >"KeyPad.lss"
+Finished building: KeyPad.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex KeyPad.elf  "KeyPad.hex"
+Finished building: KeyPad.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 KeyPad.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8260 bytes (25.2% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
 (.data + .bss + .noinit)
 
 

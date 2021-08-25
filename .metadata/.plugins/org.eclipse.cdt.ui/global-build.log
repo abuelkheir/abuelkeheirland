@@ -1,339 +1,97 @@
-11:04:16 **** Build of configuration Debug for project LCD_Driver01 ****
+09:59:16 **** Clean-only build of configuration Debug for project ADC ****
+make clean 
+rm -rf  ADC.hex  ./ADC_pro.o ./DIO_Prog.o ./main.o  sizedummy  ADC.lss  ./ADC_pro.d ./DIO_Prog.d ./main.d  ADC.elf
+ 
+09:59:20 **** Build of configuration Debug for project ADC ****
 make all 
+Building file: ../ADC_pro.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"ADC_pro.d" -MT"ADC_pro.o" -c -o "ADC_pro.o" "../ADC_pro.c"
+Finished building: ../ADC_pro.c
+ 
 Building file: ../DIO_Prog.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"DIO_Prog.d" -MT"DIO_Prog.o" -c -o "DIO_Prog.o" "../DIO_Prog.c"
 Finished building: ../DIO_Prog.c
  
-Building file: ../LCD_Prog.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD_Prog.d" -MT"LCD_Prog.o" -c -o "LCD_Prog.o" "../LCD_Prog.c"
-In file included from ../LCD_Prog.c:4:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../LCD_Prog.c:4:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../LCD_Prog.c
- 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:4:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../main.c:4:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 ../main.c: In function 'main':
-../main.c:20: error: 'DIO_u8HIGH' undeclared (first use in this function)
-../main.c:20: error: (Each undeclared identifier is reported only once
-../main.c:20: error: for each function it appears in.)
-../main.c:22: error: 'DIO_u8LOW' undeclared (first use in this function)
-make: *** [main.o] Error 1
-11:05:24 **** Incremental Build of configuration Debug for project KeyPad ****
-make all 
-Building file: ../KeyPadMain.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"KeyPadMain.d" -MT"KeyPadMain.o" -c -o "KeyPadMain.o" "../KeyPadMain.c"
-../KeyPadMain.c: In function 'main':
-../KeyPadMain.c:27: warning: implicit declaration of function '_delay_ms'
-Finished building: ../KeyPadMain.c
+../main.c:38: warning: implicit declaration of function 'ADC_Init'
+Finished building: ../main.c
  
-Building target: KeyPad.elf
+Building target: ADC.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,KeyPad.map -mmcu=atmega32 -o "KeyPad.elf"  ./DIO_Prog.o ./KeyPadMain.o ./KeyPad_Pro.o ./LCD_Prog.o   
-./KeyPadMain.o: In function `main':
-../KeyPadMain.c:27: undefined reference to `_delay_ms'
-../KeyPadMain.c:29: undefined reference to `_delay_ms'
-../KeyPadMain.c:31: undefined reference to `_delay_ms'
-make: *** [KeyPad.elf] Error 1
-11:05:39 **** Incremental Build of configuration Debug for project KeyPad ****
-make all 
-Building file: ../KeyPadMain.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"KeyPadMain.d" -MT"KeyPadMain.o" -c -o "KeyPadMain.o" "../KeyPadMain.c"
-In file included from ../KeyPadMain.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../KeyPadMain.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../KeyPadMain.c
- 
-Building target: KeyPad.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,KeyPad.map -mmcu=atmega32 -o "KeyPad.elf"  ./DIO_Prog.o ./KeyPadMain.o ./KeyPad_Pro.o ./LCD_Prog.o   
-Finished building target: KeyPad.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S KeyPad.elf  >"KeyPad.lss"
-Finished building: KeyPad.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex KeyPad.elf  "KeyPad.hex"
-Finished building: KeyPad.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 KeyPad.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    8064 bytes (24.6% Full)
-(.text + .data + .bootloader)
-
-Data:         32 bytes (1.6% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-11:06:57 **** Incremental Build of configuration Debug for project MOTOR&Hbridge ****
+avr-gcc -Wl,-Map,ADC.map -mmcu=atmega32 -o "ADC.elf"  ./ADC_pro.o ./DIO_Prog.o ./main.o   
+./main.o: In function `main':
+../main.c:38: undefined reference to `ADC_Init'
+make: *** [ADC.elf] Error 1
+09:59:39 **** Incremental Build of configuration Debug for project ADC ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:5:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../main.c:5:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../main.c
  
-Building target: MOTOR&Hbridge.elf
+Building target: ADC.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,MOTOR&Hbridge.map -mmcu=atmega32 -o "MOTOR&Hbridge.elf"  ./DIO_Prog.o ./main.o   
-"D:/Embedded training/IMT_SDK_Win_64/WinAVR/utils/bin/sh.exe": Hbridge.map: command not found
-make: *** [MOTOR&Hbridge.elf] Error 127
-11:08:28 **** Incremental Build of configuration Debug for project MOTOR&Hbridge ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:5:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../main.c:5:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
+avr-gcc -Wl,-Map,ADC.map -mmcu=atmega32 -o "ADC.elf"  ./ADC_pro.o ./DIO_Prog.o ./main.o   
+Finished building target: ADC.elf
  
-Building target: MOTOR&Hbridge.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,MOTOR&Hbridge.map -mmcu=atmega32 -o "MOTOR&Hbridge.elf"  ./DIO_Prog.o ./main.o   
-"D:/Embedded training/IMT_SDK_Win_64/WinAVR/utils/bin/sh.exe": Hbridge.map: command not found
-make: *** [MOTOR&Hbridge.elf] Error 127
-11:10:56 **** Incremental Build of configuration Debug for project KeyPad ****
-make all 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC.elf  >"ADC.lss"
+Finished building: ADC.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC.elf  "ADC.hex"
+Finished building: ADC.hex
+ 
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 KeyPad.elf
+avr-size --format=avr --mcu=atmega32 ADC.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    8064 bytes (24.6% Full)
+Program:    2466 bytes (7.5% Full)
 (.text + .data + .bootloader)
 
-Data:         32 bytes (1.6% Full)
+Data:          0 bytes (0.0% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
-11:50:17 **** Incremental Build of configuration Debug for project KeyPad ****
+10:02:26 **** Incremental Build of configuration Debug for project ADC ****
 make all 
-Building file: ../KeyPadMain.c
+Building file: ../ADC_pro.c
 Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"KeyPadMain.d" -MT"KeyPadMain.o" -c -o "KeyPadMain.o" "../KeyPadMain.c"
-In file included from ../KeyPadMain.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../KeyPadMain.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../KeyPadMain.c
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"ADC_pro.d" -MT"ADC_pro.o" -c -o "ADC_pro.o" "../ADC_pro.c"
+Finished building: ../ADC_pro.c
  
-Building target: KeyPad.elf
+Building target: ADC.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,KeyPad.map -mmcu=atmega32 -o "KeyPad.elf"  ./DIO_Prog.o ./KeyPadMain.o ./KeyPad_Pro.o ./LCD_Prog.o   
-Finished building target: KeyPad.elf
+avr-gcc -Wl,-Map,ADC.map -mmcu=atmega32 -o "ADC.elf"  ./ADC_pro.o ./DIO_Prog.o ./main.o   
+Finished building target: ADC.elf
  
 Invoking: AVR Create Extended Listing
-avr-objdump -h -S KeyPad.elf  >"KeyPad.lss"
-Finished building: KeyPad.lss
+avr-objdump -h -S ADC.elf  >"ADC.lss"
+Finished building: ADC.lss
  
 Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex KeyPad.elf  "KeyPad.hex"
-Finished building: KeyPad.hex
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC.elf  "ADC.hex"
+Finished building: ADC.hex
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 KeyPad.elf
+avr-size --format=avr --mcu=atmega32 ADC.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    7598 bytes (23.2% Full)
+Program:    2466 bytes (7.5% Full)
 (.text + .data + .bootloader)
 
-Data:         32 bytes (1.6% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-11:50:34 **** Incremental Build of configuration Debug for project KeyPad ****
-make all 
-Building file: ../KeyPadMain.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"KeyPadMain.d" -MT"KeyPadMain.o" -c -o "KeyPadMain.o" "../KeyPadMain.c"
-In file included from ../KeyPadMain.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../KeyPadMain.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../KeyPadMain.c
- 
-Building target: KeyPad.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,KeyPad.map -mmcu=atmega32 -o "KeyPad.elf"  ./DIO_Prog.o ./KeyPadMain.o ./KeyPad_Pro.o ./LCD_Prog.o   
-Finished building target: KeyPad.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S KeyPad.elf  >"KeyPad.lss"
-Finished building: KeyPad.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex KeyPad.elf  "KeyPad.hex"
-Finished building: KeyPad.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 KeyPad.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7598 bytes (23.2% Full)
-(.text + .data + .bootloader)
-
-Data:         32 bytes (1.6% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-11:53:07 **** Incremental Build of configuration Debug for project KeyPad ****
-make all 
-Building file: ../KeyPadMain.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"KeyPadMain.d" -MT"KeyPadMain.o" -c -o "KeyPadMain.o" "../KeyPadMain.c"
-In file included from ../KeyPadMain.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../KeyPadMain.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../KeyPadMain.c
- 
-Building target: KeyPad.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,KeyPad.map -mmcu=atmega32 -o "KeyPad.elf"  ./DIO_Prog.o ./KeyPadMain.o ./KeyPad_Pro.o ./LCD_Prog.o   
-Finished building target: KeyPad.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S KeyPad.elf  >"KeyPad.lss"
-Finished building: KeyPad.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex KeyPad.elf  "KeyPad.hex"
-Finished building: KeyPad.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 KeyPad.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7826 bytes (23.9% Full)
-(.text + .data + .bootloader)
-
-Data:         32 bytes (1.6% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-14:12:59 **** Incremental Build of configuration Debug for project KeyPad ****
-make all 
-Building file: ../KeyPadMain.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"KeyPadMain.d" -MT"KeyPadMain.o" -c -o "KeyPadMain.o" "../KeyPadMain.c"
-../KeyPadMain.c:1:23: warning: extra tokens at end of #include directive
-In file included from ../KeyPadMain.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../KeyPadMain.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../KeyPadMain.c
- 
-Building target: KeyPad.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,KeyPad.map -mmcu=atmega32 -o "KeyPad.elf"  ./DIO_Prog.o ./KeyPadMain.o ./KeyPad_Pro.o ./LCD_Prog.o   
-Finished building target: KeyPad.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S KeyPad.elf  >"KeyPad.lss"
-Finished building: KeyPad.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex KeyPad.elf  "KeyPad.hex"
-Finished building: KeyPad.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 KeyPad.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7538 bytes (23.0% Full)
-(.text + .data + .bootloader)
-
-Data:         32 bytes (1.6% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-14:17:43 **** Incremental Build of configuration Debug for project KeyPad ****
-make all 
-Building file: ../KeyPadMain.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"KeyPadMain.d" -MT"KeyPadMain.o" -c -o "KeyPadMain.o" "../KeyPadMain.c"
-../KeyPadMain.c:1:23: warning: extra tokens at end of #include directive
-In file included from ../KeyPadMain.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
-In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from ../KeyPadMain.c:7:
-d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../KeyPadMain.c
- 
-Building target: KeyPad.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,KeyPad.map -mmcu=atmega32 -o "KeyPad.elf"  ./DIO_Prog.o ./KeyPadMain.o ./KeyPad_Pro.o ./LCD_Prog.o   
-Finished building target: KeyPad.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S KeyPad.elf  >"KeyPad.lss"
-Finished building: KeyPad.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex KeyPad.elf  "KeyPad.hex"
-Finished building: KeyPad.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 KeyPad.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    8260 bytes (25.2% Full)
-(.text + .data + .bootloader)
-
-Data:         32 bytes (1.6% Full)
+Data:          0 bytes (0.0% Full)
 (.data + .bss + .noinit)
 
 

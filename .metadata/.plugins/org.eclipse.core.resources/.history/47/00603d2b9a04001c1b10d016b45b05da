@@ -1,0 +1,39 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 23, 2021
+ *      Author: a7med
+ */
+#include "BIT_MATH.h"
+#include "STD_TYPES.h"
+#include "ATMEGA32REGISTERS.h"
+#include "DIO_int.h"
+#include "ADC.h"
+
+
+
+
+int main(){
+
+	ADC_Init();
+	u16 AdcRes=0;
+	// led Initializing
+	DIO_vidSetPinDirection(PORTB,DIO_u8PIN_0,DIO_u8OUTPUT);
+	DIO_vidSetPinVal(PORTB,DIO_u8PIN_0,DIO_u8LOW);
+	// For the ADC inpuit
+	DIO_vidSetPinDirection(PORTA,DIO_u8PIN_0,DIO_u8INPUT);
+
+	while(1){
+		AdcRes= ADC_Read(ADC_ACDMUX_CHANNEL_ADC0);
+
+		if(AdcRes>100){
+			DIO_vidSetPinVal(PORTB,DIO_u8PIN_0,DIO_u8HIGH);}
+		else{
+			DIO_vidSetPinVal(PORTB,DIO_u8PIN_0,DIO_u8LOW);
+		}
+	}
+
+
+	return 0;
+}
+

@@ -1,0 +1,17 @@
+DIO_Prog.o DIO_Prog.o: ../DIO_Prog.c ../BIT_MATH.H ../STD_TYPES.H \
+  ../ATMEGA32_REGISTERS.H ../DIO_int.h ../STD_TYPES.h \
+  ../ATMEGA32_REGISTERS.h ../BIT_MATH.h
+
+../BIT_MATH.H:
+
+../STD_TYPES.H:
+
+../ATMEGA32_REGISTERS.H:
+
+../DIO_int.h:
+
+../STD_TYPES.h:
+
+../ATMEGA32_REGISTERS.h:
+
+../BIT_MATH.h:

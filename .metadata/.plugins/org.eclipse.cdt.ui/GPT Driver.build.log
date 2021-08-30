@@ -1,0 +1,10 @@
+11:25:46 **** Incremental Build of configuration Debug for project GPT Driver ****
+make all 
+Building target: GPT Driver.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPT Driver.map -mmcu=atmega32 -o "GPT Driver.elf"  ./DIO_Prog.o ./GPT_prog.o   
+avr-gcc.exe: Driver.map: No such file or directory
+make: *** [GPT Driver.elf] Error 1
+
+11:25:46 Build Finished (took 186ms)
+

@@ -1,97 +1,59 @@
-09:59:16 **** Clean-only build of configuration Debug for project ADC ****
+13:58:24 **** Clean-only build of configuration Debug for project UART_Driver ****
 make clean 
-rm -rf  ADC.hex  ./ADC_pro.o ./DIO_Prog.o ./main.o  sizedummy  ADC.lss  ./ADC_pro.d ./DIO_Prog.d ./main.d  ADC.elf
+rm -rf  UART_Driver.hex  ./DIO_Prog.o ./LCD_Prog.o ./UART_pro.o ./main.o  sizedummy  UART_Driver.lss  ./DIO_Prog.d ./LCD_Prog.d ./UART_pro.d ./main.d  UART_Driver.elf
  
-09:59:20 **** Build of configuration Debug for project ADC ****
+13:58:26 **** Build of configuration Debug for project UART_Driver ****
 make all 
-Building file: ../ADC_pro.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"ADC_pro.d" -MT"ADC_pro.o" -c -o "ADC_pro.o" "../ADC_pro.c"
-Finished building: ../ADC_pro.c
- 
 Building file: ../DIO_Prog.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"DIO_Prog.d" -MT"DIO_Prog.o" -c -o "DIO_Prog.o" "../DIO_Prog.c"
 Finished building: ../DIO_Prog.c
  
+Building file: ../LCD_Prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD_Prog.d" -MT"LCD_Prog.o" -c -o "LCD_Prog.o" "../LCD_Prog.c"
+In file included from ../LCD_Prog.c:3:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../LCD_Prog.c:3:
+d:/embedded training/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../LCD_Prog.c
+ 
+Building file: ../UART_pro.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"UART_pro.d" -MT"UART_pro.o" -c -o "UART_pro.o" "../UART_pro.c"
+Finished building: ../UART_pro.c
+ 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
 ../main.c: In function 'main':
-../main.c:38: warning: implicit declaration of function 'ADC_Init'
+../main.c:14: warning: pointer targets in passing argument 1 of 'LCD_vidWriteString' differ in signedness
 Finished building: ../main.c
  
-Building target: ADC.elf
+Building target: UART_Driver.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,ADC.map -mmcu=atmega32 -o "ADC.elf"  ./ADC_pro.o ./DIO_Prog.o ./main.o   
-./main.o: In function `main':
-../main.c:38: undefined reference to `ADC_Init'
-make: *** [ADC.elf] Error 1
-09:59:39 **** Incremental Build of configuration Debug for project ADC ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: ADC.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,ADC.map -mmcu=atmega32 -o "ADC.elf"  ./ADC_pro.o ./DIO_Prog.o ./main.o   
-Finished building target: ADC.elf
+avr-gcc -Wl,-Map,UART_Driver.map -mmcu=atmega32 -o "UART_Driver.elf"  ./DIO_Prog.o ./LCD_Prog.o ./UART_pro.o ./main.o   
+Finished building target: UART_Driver.elf
  
 Invoking: AVR Create Extended Listing
-avr-objdump -h -S ADC.elf  >"ADC.lss"
-Finished building: ADC.lss
+avr-objdump -h -S UART_Driver.elf  >"UART_Driver.lss"
+Finished building: UART_Driver.lss
  
 Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC.elf  "ADC.hex"
-Finished building: ADC.hex
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex UART_Driver.elf  "UART_Driver.hex"
+Finished building: UART_Driver.hex
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 ADC.elf
+avr-size --format=avr --mcu=atmega32 UART_Driver.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    2466 bytes (7.5% Full)
+Program:    7066 bytes (21.6% Full)
 (.text + .data + .bootloader)
 
-Data:          0 bytes (0.0% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-10:02:26 **** Incremental Build of configuration Debug for project ADC ****
-make all 
-Building file: ../ADC_pro.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"ADC_pro.d" -MT"ADC_pro.o" -c -o "ADC_pro.o" "../ADC_pro.c"
-Finished building: ../ADC_pro.c
- 
-Building target: ADC.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,ADC.map -mmcu=atmega32 -o "ADC.elf"  ./ADC_pro.o ./DIO_Prog.o ./main.o   
-Finished building target: ADC.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S ADC.elf  >"ADC.lss"
-Finished building: ADC.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC.elf  "ADC.hex"
-Finished building: ADC.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 ADC.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    2466 bytes (7.5% Full)
-(.text + .data + .bootloader)
-
-Data:          0 bytes (0.0% Full)
+Data:         16 bytes (0.8% Full)
 (.data + .bss + .noinit)
 
 

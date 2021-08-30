@@ -1,0 +1,7 @@
+#include "STD_TYPES.h"
+#include "ADC.h"
+#include "DIO_int.h"
+#include "LCD_int.h"
+#include "PWM_int.h"
+
+

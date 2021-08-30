@@ -1,0 +1,24 @@
+13:57:16 **** Incremental Build of configuration Debug for project UART_Send ****
+make all 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex UART_Send.elf  "UART_Send.hex"
+Finished building: UART_Send.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 UART_Send.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5658 bytes (17.3% Full)
+(.text + .data + .bootloader)
+
+Data:        288 bytes (14.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+13:57:17 Build Finished (took 292ms)
+

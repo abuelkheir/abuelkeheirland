@@ -1,0 +1,11 @@
+08:42:59 **** Incremental Build of configuration Debug for project SPI DRIVER ****
+make all 
+Building file: ../SPI_pro.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"SPI_pro.d" -MT"SPI_pro.o" -c -o "SPI_pro.o" "../SPI_pro.c"
+../SPI_pro.c:31: error: expected ')' before 'Data'
+../SPI_pro.c:36: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'SPI_u8Recieve'
+make: *** [SPI_pro.o] Error 1
+
+08:42:59 Build Finished (took 155ms)
+

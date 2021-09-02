@@ -1,0 +1,43 @@
+/*
+ * SPI_pro.c
+ *
+ *  Created on: Aug 29, 2021
+ *      Author: a7med
+ */
+#include "BIT_MATH.h"
+#include "STD_TYPES.h"
+#include "ATMEGA32_REGISTERS.h"
+
+
+void SPI_vidMasterInit(void)
+{
+	//Enable SPI
+	SPCR_REG.Bits.BIT_6=1;
+	//Set Data Order
+
+	//Enable Master
+	SPCR_REG.Bits.BIT_4=1;
+	//Select Clock Polarity "Rising is the Leading Edge"
+	SPCR_REG.Bits.BIT_3=0;
+
+	//Select The Clock Phase "Setup on the Leading Edge"
+	SPCR_REG.Bits.BIT_2=1;
+	// Select the Clock Frequency as Fosc/128
+	// leha 7aga ba3melha lesa
+
+}
+
+void SPI_vidSlaveInit(void)
+{
+
+}
+
+void SPI_vidTransfer(u8 Data)
+{
+
+}
+
+u8 SPI_u8Recieve(void)
+{
+
+}

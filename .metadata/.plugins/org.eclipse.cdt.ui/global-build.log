@@ -1,8 +1,21 @@
-13:58:24 **** Clean-only build of configuration Debug for project UART_Driver ****
+07:57:33 **** Clean-only build of configuration Debug for project UART_Driver ****
 make clean 
 rm -rf  UART_Driver.hex  ./DIO_Prog.o ./LCD_Prog.o ./UART_pro.o ./main.o  sizedummy  UART_Driver.lss  ./DIO_Prog.d ./LCD_Prog.d ./UART_pro.d ./main.d  UART_Driver.elf
  
-13:58:26 **** Build of configuration Debug for project UART_Driver ****
+08:31:34 **** Build of configuration Debug for project SPI DRIVER ****
+make all 
+Building file: ../DIO_Prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"DIO_Prog.d" -MT"DIO_Prog.o" -c -o "DIO_Prog.o" "../DIO_Prog.c"
+Finished building: ../DIO_Prog.c
+ 
+Building file: ../SPI_pro.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"SPI_pro.d" -MT"SPI_pro.o" -c -o "SPI_pro.o" "../SPI_pro.c"
+../SPI_pro.c:31: error: expected ')' before 'Data'
+../SPI_pro.c:36: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'SPI_u8Recieve'
+make: *** [SPI_pro.o] Error 1
+08:31:35 **** Build of configuration Debug for project UART_Driver ****
 make all 
 Building file: ../DIO_Prog.c
 Invoking: AVR Compiler
@@ -59,3 +72,11 @@ Data:         16 bytes (0.8% Full)
 
 Finished building: sizedummy
  
+08:42:59 **** Incremental Build of configuration Debug for project SPI DRIVER ****
+make all 
+Building file: ../SPI_pro.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"SPI_pro.d" -MT"SPI_pro.o" -c -o "SPI_pro.o" "../SPI_pro.c"
+../SPI_pro.c:31: error: expected ')' before 'Data'
+../SPI_pro.c:36: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'SPI_u8Recieve'
+make: *** [SPI_pro.o] Error 1

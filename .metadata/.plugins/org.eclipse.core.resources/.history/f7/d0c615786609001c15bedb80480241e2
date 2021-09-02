@@ -1,0 +1,39 @@
+/*
+ * SPI_pro.c
+ *
+ *  Created on: Aug 29, 2021
+ *      Author: a7med
+ */
+
+void SPI_vidMasterInit(void)
+{
+	//Enable SPI
+
+	//Set Data Order
+
+	//Enable Master
+
+	//Select Clock Polarity "Rising is the Leading Edge"
+
+
+	//Select The Clock Phase "Setup on the Leading Edge"
+
+	// Select the Clock Frequency as Fosc/128
+
+
+}
+
+void SPI_vidSlaveInit(void)
+{
+
+}
+
+void SPI_vidTransfer(u8 Data)
+{
+
+}
+
+u8 SPI_u8Recieve(void)
+{
+
+}

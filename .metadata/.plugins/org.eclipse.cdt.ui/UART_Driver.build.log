@@ -1,4 +1,4 @@
-13:58:26 **** Build of configuration Debug for project UART_Driver ****
+08:31:35 **** Build of configuration Debug for project UART_Driver ****
 make all 
 Building file: ../DIO_Prog.c
 Invoking: AVR Compiler
@@ -56,5 +56,5 @@ Data:         16 bytes (0.8% Full)
 Finished building: sizedummy
  
 
-13:58:27 Build Finished (took 658ms)
+08:31:36 Build Finished (took 1s.201ms)
 
